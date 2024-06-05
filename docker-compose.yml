@@ -1,0 +1,36 @@
+services:
+  db:
+    image: mysql:latest
+    volumes:
+      - data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: accuknox
+    ports:
+      - "3308:3306"
+    networks:
+      - local
+    healthcheck:
+      test: ["CMD", "mysql", "-h", "localhost", "-u", "root", "-padmin", "-e", "SELECT 1"]
+      timeout: 20s
+      retries: 10
+
+  app:
+    build:
+      context: .
+    command: sh -c "python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8989"
+    networks:
+      - local
+    ports:
+      - "8989:8989"
+    env_file:
+      - conf/.env
+    depends_on:
+      db:
+        condition: service_healthy
+
+networks:
+  local:
+
+volumes:
+  data:

@@ -1,0 +1,452 @@
+{
+	"info": {
+		"_postman_id": "bd8ff06d-f7d2-42bd-9849-09d25ce8724c",
+		"name": "accuknox",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24521107"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ram\",\r\n    \"email\": \"ramas@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8989/api/v1/users/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"rama@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8989/api/v1/users/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTcxNzQzNDYxOCwiZXhwIjoxNzE4Mjk4NjE4fQ.V2yBKPfhGCzBzbsDPwHcB7uCrcBTI62suO8qtgi1wqU"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8989/api/v1/users/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Me",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTcxNzQzNDYxOCwiZXhwIjoxNzE4Mjk4NjE4fQ.V2yBKPfhGCzBzbsDPwHcB7uCrcBTI62suO8qtgi1wqU"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8989/api/v1/users/me",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTcxNzQzNDYxOCwiZXhwIjoxNzE4Mjk4NjE4fQ.V2yBKPfhGCzBzbsDPwHcB7uCrcBTI62suO8qtgi1wqU"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8989/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "4",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "ramas@gmail.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Friend",
+			"item": [
+				{
+					"name": "Get friends",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTcxNzQzNDYxOCwiZXhwIjoxNzE4Mjk4NjE4fQ.V2yBKPfhGCzBzbsDPwHcB7uCrcBTI62suO8qtgi1wqU"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8989/api/v1/users?friend_status=friend",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "ramas@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "friend_status",
+									"value": "friend"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get friends requests sent",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTcxNzQzNDYxOCwiZXhwIjoxNzE4Mjk4NjE4fQ.V2yBKPfhGCzBzbsDPwHcB7uCrcBTI62suO8qtgi1wqU"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8989/api/v1/users?friend_status=sent",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							],
+							"query": [
+								{
+									"key": "friend_status",
+									"value": "sent"
+								},
+								{
+									"key": "search",
+									"value": "ramas@gmail.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get friends requests received",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTcxNzQzNDYxOCwiZXhwIjoxNzE4Mjk4NjE4fQ.V2yBKPfhGCzBzbsDPwHcB7uCrcBTI62suO8qtgi1wqU"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8989/api/v1/users?friend_status=received",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "ramas@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "friend_status",
+									"value": "received"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send friend requests",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTcxNzQzNDYxOCwiZXhwIjoxNzE4Mjk4NjE4fQ.V2yBKPfhGCzBzbsDPwHcB7uCrcBTI62suO8qtgi1wqU"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"receiver\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8989/api/v1/friends/send-request",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"v1",
+								"friends",
+								"send-request"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "ramas@gmail.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel/Reject friend requests",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTcxNzQzNDYxOCwiZXhwIjoxNzE4Mjk4NjE4fQ.V2yBKPfhGCzBzbsDPwHcB7uCrcBTI62suO8qtgi1wqU"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"receiver\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8989/api/v1/friends/cancel-request",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"v1",
+								"friends",
+								"cancel-request"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "ramas@gmail.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept friend requests",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTcxNzQzNDYxOCwiZXhwIjoxNzE4Mjk4NjE4fQ.V2yBKPfhGCzBzbsDPwHcB7uCrcBTI62suO8qtgi1wqU"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sender\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8989/api/v1/friends/accept-request",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"v1",
+								"friends",
+								"accept-request"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "ramas@gmail.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
