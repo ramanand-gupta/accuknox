@@ -6,9 +6,9 @@
 
 1.  **Clone the repository:**
    
-    `git clone https://your-repository-url.git`
+    `git clone https://github.com/ramanand-gupta/accuknox`
 
-    `cd your-repository-directory`  
+    `cd accuknox`  
 
 2.  **Build and start the application using Docker Compose:**
 
